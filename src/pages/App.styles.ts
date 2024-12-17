@@ -6,19 +6,20 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-`
+`;
 
 export const Hero = styled(Container)`
   background-color: var(--background-primary);
   height: 452px;
-`
+`;
 
 export const CardContainer = styled(Container)`
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 841px;
-`
+  gap: 24px;
+`;
 
 export const InfoGridContainer = styled(Container)`
   background-color: var(--background-primary);
   padding: 20px 50px;
-`
+`;

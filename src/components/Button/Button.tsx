@@ -1,15 +1,17 @@
 import React from "react";
+import { StyledButton } from "./Button.styles";
 
-type Props = {
+export type ButtonProps = {
   label: string;
   onClick: () => void;
+  primary: boolean;
 };
 
-const Button: React.FC<Props> = ({ label, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ label, onClick, primary }) => {
   return (
-    <button type="button" onClick={onClick}>
+    <StyledButton type="button" onClick={onClick} primary={primary}>
       {label}
-    </button>
+    </StyledButton>
   );
 };
 

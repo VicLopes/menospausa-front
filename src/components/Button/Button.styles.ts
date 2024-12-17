@@ -1,11 +1,14 @@
 import styled from "styled-components";
+import { ButtonProps } from "./Button";
 
-export const StyledButton = styled.button`
+type StyledButtonProps = Omit<ButtonProps, "label" | "onClick">;
+
+export const StyledButton = styled.button<StyledButtonProps>`
   width: 112px;
   height: 40px;
   padding: 12px;
   border-radius: 8px;
-  border: 1px solid black;
-  opacity: 0px;
-  background-color: var(--background-secondary);
+  border: 1px solid #767676;
+  background-color: ${({ primary }) =>
+    primary ? "var(--background-secondary)" : "var(--grayscale-secondary)"};
 `;
