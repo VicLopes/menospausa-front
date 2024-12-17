@@ -1,4 +1,4 @@
-import { InfoCard, Card } from "../components/components";
+import { InfoCard, Card, Navbar } from "../components/components";
 import {
   Hero,
   CardContainer,
@@ -13,6 +13,7 @@ import listIcon from "/List.svg";
 function App() {
   return (
     <>
+      <Navbar />
       <Hero>
         <Title>MenosPausa</Title>
         <Subtitle>Frase de impacto</Subtitle>
