@@ -1,5 +1,11 @@
-import { Card } from "../components/components";
-import { Hero, CardContainer, InfoGridContainer } from "./App.styles";
+import { InfoCard, Card } from "../components/components";
+import {
+  Hero,
+  CardContainer,
+  InfoGridContainer,
+  Title,
+  Subtitle,
+} from "./App.styles";
 import helpIcon from "/Help.svg";
 import infoIcon from "/Info.svg";
 import listIcon from "/List.svg";
@@ -7,7 +13,10 @@ import listIcon from "/List.svg";
 function App() {
   return (
     <>
-      <Hero></Hero>
+      <Hero>
+        <Title>MenosPausa</Title>
+        <Subtitle>Frase de impacto</Subtitle>
+      </Hero>
       <CardContainer>
         <Card
           title="Faça sua avaliação"
@@ -28,7 +37,32 @@ function App() {
           buttonLabel="Leia mais"
         />
       </CardContainer>
-      <InfoGridContainer></InfoGridContainer>
+      <InfoGridContainer>
+        <InfoCard
+          title="Faça sua avaliação"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+        />
+        <InfoCard
+          title="Informações Médicas"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+        />
+        <InfoCard
+          title="Bem-estar e Saúde"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+        />
+        <InfoCard
+          title="Comunidade"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+        />
+        <InfoCard
+          title="Material de apoio"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+        />
+        <InfoCard
+          title="Recursos adicionais"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+        />
+      </InfoGridContainer>
     </>
   );
 }
