@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   LogoImage,
   NavbarLink,
@@ -7,17 +7,23 @@ import {
   NavbarWrapper,
 } from "./Navbar.styles";
 import viteLogo from "/vite.svg";
+import { Form } from "../components";
 
 const Navbar: React.FC = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <NavbarWrapper>
       <NavbarLogo>
         <LogoImage width="32" height="32" src={viteLogo} />
       </NavbarLogo>
       <NavbarLinks>
-        <NavbarLink formButton onClick={() => console.log("hi")}>
-          Avaliação
-        </NavbarLink>
+        <div>
+          <NavbarLink formButton onClick={() => setIsFormOpen(!isFormOpen)}>
+            Avaliação
+          </NavbarLink>
+          {isFormOpen && <Form />}
+        </div>
         <NavbarLink>Sobre Nós</NavbarLink>
         <NavbarLink>Informações Médicas</NavbarLink>
         <NavbarLink>Bem-estar e Saúde</NavbarLink>

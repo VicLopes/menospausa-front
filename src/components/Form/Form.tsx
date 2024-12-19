@@ -43,12 +43,7 @@ const Form: React.FC = () => {
         </FormFieldLabel>
         <FormFieldSelect id="terapia" name="hormonalReposition" />
       </FormField>
-      <Button
-        buttonType="submit"
-        label="Envie"
-        onClick={() => handleSubmitClick}
-        primary
-      />
+      <Button label="Envie" onClick={() => handleSubmitClick} primary />
     </FormWrapper>
   );
 };
