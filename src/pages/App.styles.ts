@@ -9,19 +9,20 @@ export const Container = styled.div`
 
 export const Hero = styled(Container)`
   background-color: var(--background-primary);
-  height: 452px;
+  height: 557px;
 `;
 
 export const Title = styled.h1`
-  font-size: 72px;
-  font-weight: 700;
-  color: #1e1e1e;
+  font-size: 48px;
+  font-family: "Amiko", serif;
+  color: var(--background-secondary);
 `;
 
 export const Subtitle = styled.h2`
+  font-family: "Just Me Again Down Here", serif;
   font-size: 32px;
   font-weight: 400;
-  color: #757575;
+  color: white;
 `;
 
 export const CardContainer = styled(Container)`

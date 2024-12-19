@@ -6,6 +6,7 @@ import {
   Title,
   Subtitle,
 } from "./App.styles";
+import MenoLogo from "../../public/logo.svg?react";
 import helpIcon from "/Help.svg";
 import infoIcon from "/Info.svg";
 import listIcon from "/List.svg";
@@ -15,8 +16,13 @@ function App() {
     <>
       <Navbar />
       <Hero>
-        <Title>MenosPausa</Title>
-        <Subtitle>Frase de impacto</Subtitle>
+        <MenoLogo
+          style={{ fill: "var(--background-secondary)" }}
+          width={222}
+          height={141}
+        />
+        <Title>MENOSPAUSA</Title>
+        <Subtitle>seu site de autoajuda</Subtitle>
       </Hero>
       <CardContainer>
         <Card
