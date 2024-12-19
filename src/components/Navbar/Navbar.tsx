@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import {
-  LogoImage,
   NavbarLink,
   NavbarLinks,
   NavbarLogo,
   NavbarWrapper,
 } from "./Navbar.styles";
-import viteLogo from "/vite.svg";
+import ViteLogo from "../../../public/logo.svg?react";
 import { Form } from "../components";
 
 const Navbar: React.FC = () => {
@@ -15,7 +14,7 @@ const Navbar: React.FC = () => {
   return (
     <NavbarWrapper>
       <NavbarLogo>
-        <LogoImage width="32" height="32" src={viteLogo} />
+        <ViteLogo style={{ fill: "var(--background-primary)" }} />
       </NavbarLogo>
       <NavbarLinks>
         <div>

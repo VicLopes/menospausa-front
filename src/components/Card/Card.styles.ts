@@ -6,7 +6,6 @@ export const CardWrapper = styled.div`
   border: 1px solid #d9d9d9;
   border-radius: 8px;
   width: calc(100% - 88px);
-  min-height: 164px;
   padding: 24px;
 `;
 
