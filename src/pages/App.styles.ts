@@ -12,6 +12,10 @@ export const Hero = styled(Container)`
   height: 557px;
 `;
 
+export const TitleContainer = styled(Container)`
+  margin-top: 32px;
+`;
+
 export const Title = styled.h1`
   font-size: 48px;
   font-family: "Amiko", serif;
@@ -19,17 +23,18 @@ export const Title = styled.h1`
 `;
 
 export const Subtitle = styled.h2`
-  font-family: "Just Me Again Down Here", serif;
+  font-family: "Just Me Again Down Here", sans-serif;
+  text-rendering: optimizeSpeed;
   font-size: 32px;
-  font-weight: 400;
   color: white;
+  margin-top: -24px;
 `;
 
-export const CardContainer = styled(Container)`
-  background-color: #ffffff;
-  height: 841px;
-  gap: 24px;
+export const AboutUs = styled.div`
+  display: flex;
 `;
+
+export const SectionHeader = styled.div``;
 
 export const InfoGridContainer = styled(Container)`
   background-color: var(--background-primary);

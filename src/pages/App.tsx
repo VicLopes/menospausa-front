@@ -1,12 +1,14 @@
 import { InfoCard, Card, Navbar } from "../components/components";
 import {
   Hero,
-  CardContainer,
   InfoGridContainer,
   Title,
   Subtitle,
+  AboutUs,
+  SectionHeader,
+  TitleContainer,
 } from "./App.styles";
-import MenoLogo from "../../public/logo.svg?react";
+import MenoLogo from "../assets/logo.svg?react";
 import helpIcon from "/Help.svg";
 import infoIcon from "/Info.svg";
 import listIcon from "/List.svg";
@@ -21,29 +23,32 @@ function App() {
           width={222}
           height={141}
         />
-        <Title>MENOSPAUSA</Title>
-        <Subtitle>seu site de autoajuda</Subtitle>
+        <TitleContainer>
+          <Title>MENOSPAUSA</Title>
+          <Subtitle>seu site de autoajuda</Subtitle>
+        </TitleContainer>
       </Hero>
-      <CardContainer>
-        <Card
-          title="Faça sua avaliação"
-          description="Nosso formulário para avaliação da Menopausa. Insira suas informações e acesse informações importantes, além de descobrir sobre como manter um estilo de vida saudável"
-          iconRef={listIcon}
-          buttonLabel="Continue"
-        />
-        <Card
-          title="Sobre nós"
-          description="Nossa missão e objetivos, e a importância de falar sobre menopausa. Nossa equipe por trás do projeto e aqueles que o apoiam"
-          iconRef={infoIcon}
-          buttonLabel="Leia mais"
-        />
-        <Card
-          title="Tem dúvidas? Podemos lhe ajudar"
-          description="Quer saber mais sobre a Menopausa? Não sabe quais os sintomas? Está procurando mais informções sobre tratamentos? Tudo isso e outras perguntas podem ser respondidas aqui"
-          iconRef={helpIcon}
-          buttonLabel="Leia mais"
-        />
-      </CardContainer>
+      <Card
+        title="Faça sua avaliação"
+        description="Nosso formulário para avaliação da Menopausa. Insira suas informações e acesse informações importantes, além de descobrir sobre como manter um estilo de vida saudável"
+        iconRef={listIcon}
+        buttonLabel="Continue"
+      />
+      <Card
+        title="Sobre nós"
+        description="Nossa missão e objetivos, e a importância de falar sobre menopausa. Nossa equipe por trás do projeto e aqueles que o apoiam"
+        iconRef={infoIcon}
+        buttonLabel="Leia mais"
+      />
+      <Card
+        title="Tem dúvidas? Podemos lhe ajudar"
+        description="Quer saber mais sobre a Menopausa? Não sabe quais os sintomas? Está procurando mais informções sobre tratamentos? Tudo isso e outras perguntas podem ser respondidas aqui"
+        iconRef={helpIcon}
+        buttonLabel="Leia mais"
+      />
+      <AboutUs>
+        <SectionHeader></SectionHeader>
+      </AboutUs>
       <InfoGridContainer>
         <InfoCard
           title="Faça sua avaliação"
