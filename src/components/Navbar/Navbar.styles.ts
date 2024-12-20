@@ -39,7 +39,7 @@ export const NavbarLink = styled.a<LinkProps>`
   padding: 8px;
   background-color: ${({ formButton }) =>
     formButton ? "var(--background-primary)" : "inherit"};
-  border-radius: 8px;
+  border-radius: 32px;
   align-items: center;
   display: flex;
   cursor: pointer;

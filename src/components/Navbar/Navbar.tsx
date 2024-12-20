@@ -1,33 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   NavbarLink,
   NavbarLinks,
   NavbarLogo,
   NavbarWrapper,
 } from "./Navbar.styles";
-import ViteLogo from "../../../public/logo.svg?react";
-import { Form } from "../components";
+import MenoLogo from "../../assets/logo.svg?react";
+import { Button } from "../components";
 
 const Navbar: React.FC = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
   return (
     <NavbarWrapper>
       <NavbarLogo>
-        <ViteLogo style={{ fill: "var(--background-primary)" }} />
+        <MenoLogo style={{ fill: "var(--background-primary)" }} />
       </NavbarLogo>
       <NavbarLinks>
-        <div>
-          <NavbarLink formButton onClick={() => setIsFormOpen(!isFormOpen)}>
-            Avaliação
-          </NavbarLink>
-          {isFormOpen && <Form />}
-        </div>
         <NavbarLink>Sobre Nós</NavbarLink>
-        <NavbarLink>Informações Médicas</NavbarLink>
-        <NavbarLink>Bem-estar e Saúde</NavbarLink>
-        <NavbarLink>Recursos Adicionais</NavbarLink>
-        <NavbarLink>Contato</NavbarLink>
+        <Button
+          primary
+          label={"Avaliação"}
+          onClick={() => console.log("open form")}
+          fullWidth={false}
+        />
+        <NavbarLink>Recursos</NavbarLink>
+        <NavbarLink>Dúvidas</NavbarLink>
       </NavbarLinks>
     </NavbarWrapper>
   );
