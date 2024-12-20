@@ -30,11 +30,40 @@ export const Subtitle = styled.h2`
   margin-top: -24px;
 `;
 
-export const AboutUs = styled.div`
-  display: flex;
+export const AboutUs = styled(Container)`
+  padding: 80px 0px;
+  gap: 48px;
+  > hr {
+    width: 80%;
+    color: var(--background-primary);
+  }
 `;
 
-export const SectionHeader = styled.div``;
+export const AboutUsImages = styled(Container)`
+  display: flex;
+  flex-flow: row wrap;
+  gap: 32px;
+`;
+
+export const SectionHeader = styled.section`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+`;
+
+export const SectionTitle = styled.h2`
+  font-family: "Amiko", serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--background-primary);
+  text-transform: uppercase;
+`;
+
+export const SectionDescription = styled(Container)`
+  font-size: 24px;
+  font-weight: 300;
+`;
 
 export const InfoGridContainer = styled(Container)`
   background-color: var(--background-primary);

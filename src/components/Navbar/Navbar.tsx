@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
         <MenoLogo style={{ fill: "var(--background-primary)" }} />
       </NavbarLogo>
       <NavbarLinks>
-        <NavbarLink>Sobre Nós</NavbarLink>
+        <NavbarLink href="#about-us">Sobre Nós</NavbarLink>
         <Button
           primary
           label={"Avaliação"}
