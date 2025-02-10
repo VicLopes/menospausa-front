@@ -18,7 +18,7 @@ import {
   ResourcesContainer,
   AboutUsImages,
   FormContainer,
-  QuestionsContainer,
+  AccordionContainer,
 } from "./App.styles";
 import MenoLogo from "../assets/logo.svg?react";
 import HeartIcon from "../assets/heart.svg?react";
@@ -106,7 +106,7 @@ function App() {
           />
         </InfoGrid>
       </ResourcesContainer>
-      <QuestionsContainer id="questions">
+      <AccordionContainer id="questions">
         <SectionHeader>
           <QuestionLogo />
           <SectionTitle>Tem Dúvidas?</SectionTitle>
@@ -120,7 +120,22 @@ function App() {
         </SectionHeader>
         <Accordion text="lipsum" title="titleText" />
         <hr />
-      </QuestionsContainer>
+      </AccordionContainer>
+      <AccordionContainer>
+        <SectionHeader>
+          <SectionTitle>Os Principais Tipos de Menopausa</SectionTitle>
+        </SectionHeader>
+        <Accordion text="lipsum" title="titleText" />
+        <hr />
+      </AccordionContainer>
+      <AccordionContainer>
+        <SectionHeader>
+          <SectionTitle>
+            Relação Entre A Menopausa E Aparecimento de Doenças
+          </SectionTitle>
+        </SectionHeader>
+        <Accordion text="lipsum" title="titleText" />
+      </AccordionContainer>
     </>
   );
 }

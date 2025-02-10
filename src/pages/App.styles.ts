@@ -83,7 +83,7 @@ export const InfoGrid = styled(Container)`
   gap: 48px;
 `;
 
-export const QuestionsContainer = styled(Container)`
+export const AccordionContainer = styled(Container)`
   padding: 80px 50px;
   gap: 48px;
 `;
