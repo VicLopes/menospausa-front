@@ -1,7 +1,7 @@
-import { InfoCard, Card, Navbar, Button, Form } from "../components/components";
+import { InfoCard, Navbar, Button, Form } from "../components/components";
 import {
   Hero,
-  InfoGridContainer,
+  InfoGrid,
   Title,
   Subtitle,
   AboutUs,
@@ -9,12 +9,12 @@ import {
   TitleContainer,
   SectionTitle,
   SectionDescription,
+  ResourcesContainer,
   AboutUsImages,
   FormContainer,
 } from "./App.styles";
 import MenoLogo from "../assets/logo.svg?react";
 import HeartIcon from "../assets/heart.svg?react";
-import helpIcon from "/Help.svg";
 
 function App() {
   return (
@@ -67,38 +67,37 @@ function App() {
         </SectionHeader>
         <Form />
       </FormContainer>
-      <Card
-        title="Tem dúvidas? Podemos lhe ajudar"
-        description="Quer saber mais sobre a Menopausa? Não sabe quais os sintomas? Está procurando mais informções sobre tratamentos? Tudo isso e outras perguntas podem ser respondidas aqui"
-        iconRef={helpIcon}
-        buttonLabel="Leia mais"
-      />
-      <InfoGridContainer>
-        <InfoCard
-          title="Faça sua avaliação"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
-        />
-        <InfoCard
-          title="Informações Médicas"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
-        />
-        <InfoCard
-          title="Bem-estar e Saúde"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
-        />
-        <InfoCard
-          title="Comunidade"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
-        />
-        <InfoCard
-          title="Material de apoio"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
-        />
-        <InfoCard
-          title="Recursos adicionais"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
-        />
-      </InfoGridContainer>
+      <ResourcesContainer>
+        <SectionHeader>
+          <SectionTitle>Recursos</SectionTitle>
+        </SectionHeader>
+        <InfoGrid>
+          <InfoCard
+            title="Faça sua avaliação"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+          />
+          <InfoCard
+            title="Informações Médicas"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+          />
+          <InfoCard
+            title="Bem-estar e Saúde"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+          />
+          <InfoCard
+            title="Comunidade"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+          />
+          <InfoCard
+            title="Material de apoio"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+          />
+          <InfoCard
+            title="Recursos adicionais"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+          />
+        </InfoGrid>
+      </ResourcesContainer>
     </>
   );
 }

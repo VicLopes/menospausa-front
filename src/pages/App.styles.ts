@@ -70,9 +70,13 @@ export const SectionDescription = styled(Container)`
   font-weight: 300;
 `;
 
-export const InfoGridContainer = styled(Container)`
-  background-color: var(--background-primary);
-  padding: 20px 50px;
+export const ResourcesContainer = styled(Container)`
+  padding: 80px 50px;
+  background-color: #ffdded;
+`;
+
+export const InfoGrid = styled(Container)`
+  margin-top: 32px;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 48px;
