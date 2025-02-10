@@ -1,34 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import {
-  LogoImage,
   NavbarLink,
   NavbarLinks,
   NavbarLogo,
   NavbarWrapper,
 } from "./Navbar.styles";
-import viteLogo from "/vite.svg";
-import { Form } from "../components";
+import MenoLogo from "../../assets/logo.svg?react";
 
 const Navbar: React.FC = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
   return (
     <NavbarWrapper>
       <NavbarLogo>
-        <LogoImage width="32" height="32" src={viteLogo} />
+        <MenoLogo style={{ fill: "var(--background-primary)" }} />
       </NavbarLogo>
       <NavbarLinks>
-        <div>
-          <NavbarLink formButton onClick={() => setIsFormOpen(!isFormOpen)}>
-            Avaliação
-          </NavbarLink>
-          {isFormOpen && <Form />}
-        </div>
-        <NavbarLink>Sobre Nós</NavbarLink>
-        <NavbarLink>Informações Médicas</NavbarLink>
-        <NavbarLink>Bem-estar e Saúde</NavbarLink>
-        <NavbarLink>Recursos Adicionais</NavbarLink>
-        <NavbarLink>Contato</NavbarLink>
+        <NavbarLink href="#about-us">Sobre Nós</NavbarLink>
+        <NavbarLink href="#form" formButton>
+          Avaliação
+        </NavbarLink>
+        <NavbarLink href="#resources">Recursos</NavbarLink>
+        <NavbarLink href="#questions">Dúvidas</NavbarLink>
       </NavbarLinks>
     </NavbarWrapper>
   );

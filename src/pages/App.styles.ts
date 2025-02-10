@@ -5,35 +5,85 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  > hr {
+    width: 80%;
+    color: var(--background-primary);
+  }
 `;
 
 export const Hero = styled(Container)`
   background-color: var(--background-primary);
-  height: 452px;
+  height: 557px;
+`;
+
+export const TitleContainer = styled(Container)`
+  margin-top: 32px;
 `;
 
 export const Title = styled.h1`
-  font-size: 72px;
-  font-weight: 700;
-  color: #1e1e1e;
+  font-size: 48px;
+  font-family: "Amiko", serif;
+  color: var(--background-secondary);
 `;
 
 export const Subtitle = styled.h2`
+  font-family: "Just Me Again Down Here", sans-serif;
+  text-rendering: optimizeSpeed;
   font-size: 32px;
-  font-weight: 400;
-  color: #757575;
+  color: white;
+  margin-top: -24px;
 `;
 
-export const CardContainer = styled(Container)`
-  background-color: #ffffff;
-  height: 841px;
-  gap: 24px;
+export const AboutUs = styled(Container)`
+  padding: 80px 0px;
+  gap: 48px;
 `;
 
-export const InfoGridContainer = styled(Container)`
-  background-color: var(--background-primary);
-  padding: 20px 50px;
+export const AboutUsImages = styled(Container)`
+  display: flex;
+  flex-flow: row wrap;
+  gap: 32px;
+`;
+
+export const FormContainer = styled(Container)`
+  padding: 80px 0px;
+  gap: 48px;
+`;
+
+export const SectionHeader = styled.section`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+`;
+
+export const SectionTitle = styled.h2`
+  font-family: "Amiko", serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--background-primary);
+  text-transform: uppercase;
+`;
+
+export const SectionDescription = styled(Container)`
+  font-size: 24px;
+  font-weight: 300;
+`;
+
+export const ResourcesContainer = styled(Container)`
+  padding: 80px 50px;
+  background-color: #ffdded;
+`;
+
+export const InfoGrid = styled(Container)`
+  margin-top: 32px;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 48px;
+`;
+
+export const AccordionContainer = styled(Container)`
+  padding: 80px 50px;
   gap: 48px;
 `;

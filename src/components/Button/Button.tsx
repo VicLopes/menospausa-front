@@ -5,20 +5,21 @@ export type ButtonProps = {
   label: string;
   onClick: (args: unknown) => void;
   primary: boolean;
-  buttonType?: "button" | "submit" | "reset";
+  fullWidth?: boolean;
 };
 
 const Button: React.FC<ButtonProps> = ({
   label,
   onClick,
   primary,
-  buttonType,
+  fullWidth,
 }) => {
   return (
     <StyledButton
-      type={buttonType ? buttonType : "button"}
+      type="button"
       onClick={onClick}
       primary={primary}
+      fullWidth={fullWidth}
     >
       {label}
     </StyledButton>

@@ -4,13 +4,16 @@ export const CardWrapper = styled.div`
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  padding: 24px;
+  padding: 32px;
+  border-radius: 16px;
   flex: 1 1 calc(33.33% - 48px);
   max-width: 33.33%;
+  background-color: var(--background-primary);
 `;
 
 export const CardBody = styled.div`
   display: flex;
+  color: #fff;
   flex-direction: column;
   justify-content: flex-start;
   gap: 16px;
@@ -21,13 +24,11 @@ export const CardBody = styled.div`
 `;
 
 export const TitleText = styled.h3`
-  color: #1e1e1e;
   font-weight: 600;
   font-size: 24px;
 `;
 
 export const DescriptionText = styled.p`
-  color: #757575;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
 `;

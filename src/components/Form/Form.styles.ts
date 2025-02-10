@@ -1,35 +1,58 @@
 import styled from "styled-components";
 
+type LabelProps = {
+  centered?: boolean;
+};
+
 export const FormWrapper = styled.form`
   padding: 24px;
   gap: 24px;
-  border: 1px solid #d9d9d9;
-  border-radius: 8px;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  max-width: 620px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 `;
 
 export const FormField = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  &:last-child {
+    grid-column: span 2;
+    align-items: center;
+  }
 `;
 
-export const FormFieldLabel = styled.label`
+export const FormFieldLabel = styled.label<LabelProps>`
+  align-self: ${({ centered }) => (centered ? "center" : "inherit")};
+  color: var(--background-primary);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
 `;
 
 export const FormFieldInput = styled.input`
-  border: 1px solid #d9d9d9;
-  border-radius: 8px;
+  border: 0px;
+  border-bottom: 1px solid var(--grayscale-primary);
   padding: 12px 16px;
+
+  &::placeholder {
+    color: var(--grayscale-primary);
+  }
 `;
 
 export const FormFieldSelect = styled.select`
-  border: 1px solid #d9d9d9;
-  border-radius: 8px;
+  border: 0px;
+  border-bottom: 1px solid var(--grayscale-primary);
   padding: 12px 16px;
+`;
+
+export const RadioContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+`;
+
+export const RadioInputContainer = styled.div`
+  display: flex;
+  flex-flow: row;
+  justify-self: center;
+  align-items: center;
 `;

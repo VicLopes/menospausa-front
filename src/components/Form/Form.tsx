@@ -1,49 +1,144 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FormField,
   FormFieldInput,
   FormFieldLabel,
-  FormFieldSelect,
   FormWrapper,
+  RadioContainer,
+  RadioInputContainer,
 } from "./Form.styles";
 import { Button } from "../components";
 
 const Form: React.FC = () => {
-  const onSubmit = () => {
-    console.log("handle submit");
-    console.log("TBD");
+  const [formData, setFormData] = useState({
+    name: "",
+    dateOfBirth: "",
+    menarchAge: "",
+    menopauseAge: "",
+    naturalMenopause: "",
+    hormonalReposition: "",
+  });
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
-  const handleSubmitClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
+  const onSubmit = () => {
+    // TBD
+    console.log("Form submitted:", formData);
+  };
+
+  const handleSubmitClick = () => {
     onSubmit();
   };
 
   return (
     <FormWrapper>
       <FormField>
+        <FormFieldLabel>Nome</FormFieldLabel>
+        <FormFieldInput
+          type="text"
+          placeholder="Maria da Silva"
+          name="name"
+          value={formData.name}
+          onChange={handleInputChange}
+        />
+      </FormField>
+      <FormField>
         <FormFieldLabel>Data de Nascimento</FormFieldLabel>
-        <FormFieldInput type="date" placeholder="Data" name="dateOfBirth" />
+        <FormFieldInput
+          type="date"
+          placeholder="Data"
+          name="dateOfBirth"
+          onChange={handleInputChange}
+          value={formData.dateOfBirth}
+        />
       </FormField>
       <FormField>
         <FormFieldLabel>Idade da Menarca (Primeira Menstruação)</FormFieldLabel>
-        <FormFieldInput type="number" placeholder="Valor" name="menarchAge" />
+        <FormFieldInput
+          type="number"
+          placeholder="15"
+          name="menarchAge"
+          onChange={handleInputChange}
+          value={formData.menarchAge}
+        />
       </FormField>
       <FormField>
         <FormFieldLabel>Idade da Menopausa</FormFieldLabel>
-        <FormFieldInput type="number" placeholder="Valor" name="menopauseAge" />
+        <FormFieldInput
+          type="number"
+          placeholder="50"
+          name="menopauseAge"
+          onChange={handleInputChange}
+          value={formData.menopauseAge}
+        />
       </FormField>
       <FormField>
-        <FormFieldLabel>Menopausa foi natural?</FormFieldLabel>
-        <FormFieldSelect id="natural" name="menopauseNatural" />
+        <FormFieldLabel centered>Menopausa foi natural?</FormFieldLabel>
+        <RadioContainer>
+          <RadioInputContainer>
+            <FormFieldInput
+              type="radio"
+              name="naturalMenopause"
+              value="no"
+              id="naturalMenopauseNo"
+              checked={formData.naturalMenopause === "no"}
+              onChange={handleInputChange}
+            />
+            <FormFieldLabel htmlFor="naturalMenopauseNo">Não</FormFieldLabel>
+          </RadioInputContainer>
+          <RadioInputContainer>
+            <FormFieldInput
+              type="radio"
+              name="naturalMenopause"
+              value="yes"
+              id="naturalMenopauseYes"
+              checked={formData.naturalMenopause === "yes"}
+              onChange={handleInputChange}
+            />
+            <FormFieldLabel htmlFor="naturalMenopauseYes">Sim</FormFieldLabel>
+          </RadioInputContainer>
+        </RadioContainer>
       </FormField>
       <FormField>
-        <FormFieldLabel>
+        <FormFieldLabel centered>
           Está realizando Terapia de Reposição Hormonal?
         </FormFieldLabel>
-        <FormFieldSelect id="terapia" name="hormonalReposition" />
+        <RadioContainer>
+          <RadioInputContainer>
+            <FormFieldInput
+              type="radio"
+              name="hormonalReposition"
+              id="hormonalRepositionNo"
+              value="no"
+              checked={formData.hormonalReposition === "no"}
+              onChange={handleInputChange}
+            />
+            <FormFieldLabel htmlFor="hormonalRepositionNo">Não</FormFieldLabel>
+          </RadioInputContainer>
+          <RadioInputContainer>
+            <FormFieldInput
+              type="radio"
+              name="hormonalReposition"
+              id="hormonalRepositionYes"
+              value="yes"
+              checked={formData.hormonalReposition === "yes"}
+              onChange={handleInputChange}
+            />
+            <FormFieldLabel htmlFor="hormonalRepositionYes">Sim</FormFieldLabel>
+          </RadioInputContainer>
+        </RadioContainer>
       </FormField>
-      <Button label="Envie" onClick={() => handleSubmitClick} primary />
+      <FormField>
+        <Button label="Envie" onClick={handleSubmitClick} primary />
+      </FormField>
     </FormWrapper>
   );
 };
