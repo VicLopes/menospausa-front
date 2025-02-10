@@ -1,4 +1,4 @@
-import { InfoCard, Card, Navbar, Button } from "../components/components";
+import { InfoCard, Card, Navbar, Button, Form } from "../components/components";
 import {
   Hero,
   InfoGridContainer,
@@ -10,11 +10,11 @@ import {
   SectionTitle,
   SectionDescription,
   AboutUsImages,
+  FormContainer,
 } from "./App.styles";
 import MenoLogo from "../assets/logo.svg?react";
 import HeartIcon from "../assets/heart.svg?react";
 import helpIcon from "/Help.svg";
-import listIcon from "/List.svg";
 
 function App() {
   return (
@@ -54,21 +54,25 @@ function App() {
         />
         <hr />
       </AboutUs>
-      <Card
-        title="Faça sua avaliação"
-        description="Nosso formulário para avaliação da Menopausa. Insira suas informações e acesse informações importantes, além de descobrir sobre como manter um estilo de vida saudável"
-        iconRef={listIcon}
-        buttonLabel="Continue"
-      />
+      <FormContainer id="form">
+        <SectionHeader>
+          <SectionTitle>Avalie seus Sintomas</SectionTitle>
+          <SectionDescription>
+            <p>Nosso formulário para verificação do estado da Menopausa.</p>
+            <p>
+              Insira suas informações e descubra como manter um estilo de vida
+              saudável.
+            </p>
+          </SectionDescription>
+        </SectionHeader>
+        <Form />
+      </FormContainer>
       <Card
         title="Tem dúvidas? Podemos lhe ajudar"
         description="Quer saber mais sobre a Menopausa? Não sabe quais os sintomas? Está procurando mais informções sobre tratamentos? Tudo isso e outras perguntas podem ser respondidas aqui"
         iconRef={helpIcon}
         buttonLabel="Leia mais"
       />
-      <AboutUs>
-        <SectionHeader></SectionHeader>
-      </AboutUs>
       <InfoGridContainer>
         <InfoCard
           title="Faça sua avaliação"

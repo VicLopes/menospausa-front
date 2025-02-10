@@ -45,6 +45,11 @@ export const AboutUsImages = styled(Container)`
   gap: 32px;
 `;
 
+export const FormContainer = styled(Container)`
+  padding: 80px 0px;
+  gap: 48px;
+`;
+
 export const SectionHeader = styled.section`
   display: flex;
   align-items: center;
