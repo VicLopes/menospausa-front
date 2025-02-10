@@ -1,4 +1,10 @@
-import { InfoCard, Navbar, Button, Form } from "../components/components";
+import {
+  InfoCard,
+  Navbar,
+  Button,
+  Form,
+  Accordion,
+} from "../components/components";
 import {
   Hero,
   InfoGrid,
@@ -100,7 +106,7 @@ function App() {
           />
         </InfoGrid>
       </ResourcesContainer>
-      <QuestionsContainer id="form">
+      <QuestionsContainer id="questions">
         <SectionHeader>
           <QuestionLogo />
           <SectionTitle>Tem Dúvidas?</SectionTitle>
@@ -109,9 +115,10 @@ function App() {
               Quer saber mais sobre a Menopausa? Não sabe quais os sintomas?
             </p>
             <p>Está procurando mais informações sobre tratamentos?</p>
-            <p>Tudo isso e outars perguntas podem ser respondidas aqui.</p>
+            <p>Tudo isso e outras perguntas podem ser respondidas aqui.</p>
           </SectionDescription>
         </SectionHeader>
+        <Accordion text="lipsum" title="titleText" />
         <hr />
       </QuestionsContainer>
     </>

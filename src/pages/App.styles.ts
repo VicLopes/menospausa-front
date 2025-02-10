@@ -85,4 +85,5 @@ export const InfoGrid = styled(Container)`
 
 export const QuestionsContainer = styled(Container)`
   padding: 80px 50px;
+  gap: 48px;
 `;

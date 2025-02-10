@@ -6,7 +6,6 @@ import {
   NavbarWrapper,
 } from "./Navbar.styles";
 import MenoLogo from "../../assets/logo.svg?react";
-import { Button } from "../components";
 
 const Navbar: React.FC = () => {
   return (
@@ -16,14 +15,11 @@ const Navbar: React.FC = () => {
       </NavbarLogo>
       <NavbarLinks>
         <NavbarLink href="#about-us">Sobre Nós</NavbarLink>
-        <Button
-          primary
-          label={"Avaliação"}
-          onClick={() => console.log("open form")}
-          fullWidth={false}
-        />
-        <NavbarLink>Recursos</NavbarLink>
-        <NavbarLink>Dúvidas</NavbarLink>
+        <NavbarLink href="#form" formButton>
+          Avaliação
+        </NavbarLink>
+        <NavbarLink href="#resources">Recursos</NavbarLink>
+        <NavbarLink href="#questions">Dúvidas</NavbarLink>
       </NavbarLinks>
     </NavbarWrapper>
   );

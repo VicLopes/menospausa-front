@@ -36,13 +36,14 @@ export const NavbarLinks = styled.div`
 export const NavbarLink = styled.a<LinkProps>`
   color: ${({ formButton }) => (formButton ? "white" : "inherit")};
   font-size: 16px;
-  padding: 8px;
+  padding: 8px 16px;
   background-color: ${({ formButton }) =>
     formButton ? "var(--background-primary)" : "inherit"};
   border-radius: 32px;
   align-items: center;
   display: flex;
   cursor: pointer;
+  text-decoration: none;
 `;
 
 export const NavbarLogo = styled.div``;
