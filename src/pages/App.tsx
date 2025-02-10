@@ -112,6 +112,7 @@ function App() {
             <p>Tudo isso e outars perguntas podem ser respondidas aqui.</p>
           </SectionDescription>
         </SectionHeader>
+        <hr />
       </QuestionsContainer>
     </>
   );

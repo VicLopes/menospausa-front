@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+type LabelProps = {
+  centered?: boolean;
+};
+
 export const FormWrapper = styled.form`
   padding: 24px;
   gap: 24px;
@@ -18,7 +22,8 @@ export const FormField = styled.div`
   }
 `;
 
-export const FormFieldLabel = styled.label`
+export const FormFieldLabel = styled.label<LabelProps>`
+  align-self: ${({ centered }) => (centered ? "center" : "inherit")};
   color: var(--background-primary);
   font-size: 16px;
   font-weight: 300;

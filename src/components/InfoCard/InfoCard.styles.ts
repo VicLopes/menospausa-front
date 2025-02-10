@@ -4,7 +4,7 @@ export const CardWrapper = styled.div`
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  padding: 24px;
+  padding: 32px;
   border-radius: 16px;
   flex: 1 1 calc(33.33% - 48px);
   max-width: 33.33%;

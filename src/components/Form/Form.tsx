@@ -81,7 +81,7 @@ const Form: React.FC = () => {
         />
       </FormField>
       <FormField>
-        <FormFieldLabel>Menopausa foi natural?</FormFieldLabel>
+        <FormFieldLabel centered>Menopausa foi natural?</FormFieldLabel>
         <RadioContainer>
           <RadioInputContainer>
             <FormFieldInput
@@ -108,7 +108,7 @@ const Form: React.FC = () => {
         </RadioContainer>
       </FormField>
       <FormField>
-        <FormFieldLabel>
+        <FormFieldLabel centered>
           Está realizando Terapia de Reposição Hormonal?
         </FormFieldLabel>
         <RadioContainer>
