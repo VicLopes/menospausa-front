@@ -12,9 +12,11 @@ import {
   ResourcesContainer,
   AboutUsImages,
   FormContainer,
+  QuestionsContainer,
 } from "./App.styles";
 import MenoLogo from "../assets/logo.svg?react";
 import HeartIcon from "../assets/heart.svg?react";
+import QuestionLogo from "../assets/question.svg?react";
 
 function App() {
   return (
@@ -67,7 +69,7 @@ function App() {
         </SectionHeader>
         <Form />
       </FormContainer>
-      <ResourcesContainer>
+      <ResourcesContainer id="resources">
         <SectionHeader>
           <SectionTitle>Recursos</SectionTitle>
         </SectionHeader>
@@ -98,6 +100,19 @@ function App() {
           />
         </InfoGrid>
       </ResourcesContainer>
+      <QuestionsContainer id="form">
+        <SectionHeader>
+          <QuestionLogo />
+          <SectionTitle>Tem Dúvidas?</SectionTitle>
+          <SectionDescription>
+            <p>
+              Quer saber mais sobre a Menopausa? Não sabe quais os sintomas?
+            </p>
+            <p>Está procurando mais informações sobre tratamentos?</p>
+            <p>Tudo isso e outars perguntas podem ser respondidas aqui.</p>
+          </SectionDescription>
+        </SectionHeader>
+      </QuestionsContainer>
     </>
   );
 }

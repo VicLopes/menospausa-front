@@ -5,6 +5,11 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  > hr {
+    width: 80%;
+    color: var(--background-primary);
+  }
 `;
 
 export const Hero = styled(Container)`
@@ -33,10 +38,6 @@ export const Subtitle = styled.h2`
 export const AboutUs = styled(Container)`
   padding: 80px 0px;
   gap: 48px;
-  > hr {
-    width: 80%;
-    color: var(--background-primary);
-  }
 `;
 
 export const AboutUsImages = styled(Container)`
@@ -80,4 +81,8 @@ export const InfoGrid = styled(Container)`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 48px;
+`;
+
+export const QuestionsContainer = styled(Container)`
+  padding: 80px 50px;
 `;
