@@ -17,6 +17,7 @@ const Form: React.FC = () => {
     menopauseAge: "",
     naturalMenopause: "",
     hormonalReposition: "",
+    heatWaves: 0,
   });
 
   const handleInputChange = (
@@ -32,6 +33,13 @@ const Form: React.FC = () => {
   const onSubmit = () => {
     // TBD
     console.log("Form submitted:", formData);
+    console.log(
+      "ta em risco?",
+      Number(formData.menopauseAge) - Number(formData.menarchAge)
+    );
+    if (Number(formData.menopauseAge) - Number(formData.menarchAge) === 1) {
+      window.location.href = window.location.href + "#questions";
+    }
   };
 
   const handleSubmitClick = () => {
@@ -133,6 +141,44 @@ const Form: React.FC = () => {
               onChange={handleInputChange}
             />
             <FormFieldLabel htmlFor="hormonalRepositionYes">Sim</FormFieldLabel>
+          </RadioInputContainer>
+        </RadioContainer>
+      </FormField>
+      <FormField>
+        <FormFieldLabel centered>Está sentindo ondas de calor?</FormFieldLabel>
+        <RadioContainer>
+          <RadioInputContainer>
+            <FormFieldInput
+              type="radio"
+              name="heatWaves"
+              id="heatWavesLight"
+              value={4}
+              checked={Number(formData.heatWaves) === 4}
+              onChange={handleInputChange}
+            />
+            <FormFieldLabel htmlFor="heatWavesLight">Leves</FormFieldLabel>
+          </RadioInputContainer>
+          <RadioInputContainer>
+            <FormFieldInput
+              type="radio"
+              name="heatWaves"
+              id="heatWavesMedium"
+              value={8}
+              checked={Number(formData.heatWaves) === 8}
+              onChange={handleInputChange}
+            />
+            <FormFieldLabel htmlFor="heatWavesMedium">Moderados</FormFieldLabel>
+          </RadioInputContainer>
+          <RadioInputContainer>
+            <FormFieldInput
+              type="radio"
+              name="heatWaves"
+              id="heatWavesHeavy"
+              value={12}
+              checked={Number(formData.heatWaves) === 12}
+              onChange={handleInputChange}
+            />
+            <FormFieldLabel htmlFor="heatWavesHeavy">Intensos</FormFieldLabel>
           </RadioInputContainer>
         </RadioContainer>
       </FormField>

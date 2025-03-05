@@ -47,7 +47,7 @@ export const FormFieldSelect = styled.select`
 
 export const RadioContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 `;
 
 export const RadioInputContainer = styled.div`
