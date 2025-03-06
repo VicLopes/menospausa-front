@@ -38,7 +38,7 @@ const Form: React.FC = () => {
       Number(formData.menopauseAge) - Number(formData.menarchAge)
     );
     if (Number(formData.menopauseAge) - Number(formData.menarchAge) === 1) {
-      window.location.href = window.location.href + "#questions";
+      window.location.hash = "#questions";
     }
   };
 
