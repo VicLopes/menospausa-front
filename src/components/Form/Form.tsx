@@ -40,10 +40,11 @@ const Form: React.FC = () => {
       "ta em risco?",
       Number(formData.heatWaves) + Number(formData.paresthesia)
     );
+
     if (Number(formData.heatWaves) + Number(formData.paresthesia) + Number(formData.insomnia) + Number(formData.nervousness)
        + Number(formData.depressiveness) + Number(formData.fatigue) + Number(formData.jointNmusclePain) + Number(formData.cephalalgia)
        + Number(formData.palpitations) + Number(formData.tinnitus) === 1) {
-      window.location.href = window.location.href + "#questions";
+      window.location.hash = "#questions";
     }
   };
 

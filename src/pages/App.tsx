@@ -49,9 +49,9 @@ function App() {
           </SectionDescription>
         </SectionHeader>
         <AboutUsImages>
-          <img src="/src/assets/img/img1.png" />
-          <img src="/src/assets/img/img2.png" />
-          <img src="/src/assets/img/img3.png" />
+          <img src="../assets/img/img1.png" />
+          <img src="../assets/img/img2.png" />
+          <img src="../assets/img/img3.png" />
         </AboutUsImages>
         <Button
           label="Veja mais"
