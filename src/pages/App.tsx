@@ -21,7 +21,6 @@ import {
   AccordionContainer,
 } from "./App.styles";
 import MenoLogo from "../assets/logo.svg?react";
-import HeartIcon from "../assets/heart.svg?react";
 import QuestionLogo from "../assets/question.svg?react";
 
 function App() {
@@ -36,12 +35,11 @@ function App() {
         />
         <TitleContainer>
           <Title>MENOSPAUSA</Title>
-          <Subtitle>seu site de autoajuda</Subtitle>
+          <Subtitle>Maisvida</Subtitle>
         </TitleContainer>
       </Hero>
       <AboutUs id="about-us">
         <SectionHeader>
-          <HeartIcon />
           <SectionTitle>Sobre Nós</SectionTitle>
           <SectionDescription>
             <p>
@@ -68,8 +66,7 @@ function App() {
           <SectionDescription>
             <p>Nosso formulário para verificação do estado da Menopausa.</p>
             <p>
-              Insira suas informações e descubra como manter um estilo de vida
-              saudável.
+              Insira suas informações e descubra mais sobre o que você pode passar por, e quem pode ajudar.
             </p>
           </SectionDescription>
         </SectionHeader>
@@ -81,28 +78,28 @@ function App() {
         </SectionHeader>
         <InfoGrid>
           <InfoCard
-            title="Faça sua avaliação"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+            title="Avalie seus sintomas"
+            description="Os tipos principais são: Natural, Induzida e Precoce. Verifique o tipo que você se encontra e entenda melhor como buscar acompanhamento médico"
           />
           <InfoCard
-            title="Informações Médicas"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+            title="Conhecendo o que é"
+            description="O que é menopausa? O que é climatério? Como saber se estou na menopausa? O que acontece com os hormônios? Relação entre menpausa e  aparecimento de doenças"
           />
           <InfoCard
-            title="Bem-estar e Saúde"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+            title="Bem-estar"
+            description="Alimentação com orientações nutricionais. Atividades físicas. Cuidados com a atividade sexual. Tratamentos e terapias. Cuidando da saúde mental"
           />
           <InfoCard
-            title="Comunidade"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+            title="Profissionais"
+            description="A menopausa é uma fase natural da vida da mulher. Para garantir uma transição suave e saudável, contar com o apoio de profissionais especializados é fundamental"
           />
           <InfoCard
             title="Material de apoio"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+            description="Mitos e verdades. Manuais. Fitoterápicos para Aliviar os Sintomas da Menopausa"
           />
           <InfoCard
             title="Recursos adicionais"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc  condimentum scelerisque quam eu porta. Pellentesque purus est, pretium  quis arcu ut, dictum imperdiet turpis."
+            description="Guias. Infográficos. Associações"
           />
         </InfoGrid>
       </ResourcesContainer>
@@ -118,20 +115,89 @@ function App() {
             <p>Tudo isso e outras perguntas podem ser respondidas aqui.</p>
           </SectionDescription>
         </SectionHeader>
-        <Accordion text="lipsum" title="titleText" />
+        <Accordion text="lipsum" title="O que é menopausa?" />
+        <Accordion text="lipsum" title="O que é climatério?" />
+        <Accordion text="lipsum" title="Quais são os sintomas mais comuns?" />
+        <Accordion text="lipsum" title="O que acontece com os hormônios?" />
         <hr />
       </AccordionContainer>
-      <AccordionContainer>
+      <AccordionContainer id="types">
         <SectionHeader>
           <SectionTitle>Os Principais Tipos de Menopausa</SectionTitle>
         </SectionHeader>
         <Accordion text="lipsum" title="titleText" />
         <hr />
       </AccordionContainer>
-      <AccordionContainer>
+      <AccordionContainer  id="treatments">
+        <SectionHeader>
+          <SectionTitle>
+            Tratamentos: Opções de tratamento médico e alternativo
+          </SectionTitle>
+        </SectionHeader>
+        <Accordion text="lipsum" title="titleText" />
+        <hr />
+      </AccordionContainer>
+      <AccordionContainer  id="fitoterapics">
+        <SectionHeader>
+          <SectionTitle>
+            Fitoterápicos para aliviar os sintomas da menopausa: Uma abordagem natural
+          </SectionTitle>
+        </SectionHeader>
+        <Accordion text="lipsum" title="titleText" />
+        <hr />
+      </AccordionContainer>
+      <AccordionContainer  id="diseases">
         <SectionHeader>
           <SectionTitle>
             Relação Entre A Menopausa E Aparecimento de Doenças
+          </SectionTitle>
+        </SectionHeader>
+        <Accordion text="lipsum" title="titleText" />
+      </AccordionContainer>
+      <AccordionContainer  id="nutrition">
+        <SectionHeader>
+          <SectionTitle>
+            Alimentação equilibrada para a menopausa
+          </SectionTitle>
+        </SectionHeader>
+        <Accordion text="lipsum" title="titleText" />
+      </AccordionContainer>
+      <AccordionContainer  id="physical">
+        <SectionHeader>
+          <SectionTitle>
+            Atividades físicas mais recomendadas para mulheres na menopausa
+          </SectionTitle>
+        </SectionHeader>
+        <Accordion text="lipsum" title="titleText" />
+      </AccordionContainer>
+      <AccordionContainer  id="sexual">
+        <SectionHeader>
+          <SectionTitle>
+            Cuidados com a saúde sexual
+          </SectionTitle>
+        </SectionHeader>
+        <Accordion text="lipsum" title="titleText" />
+      </AccordionContainer>
+      <AccordionContainer  id="mental">
+        <SectionHeader>
+          <SectionTitle>
+            Cuidando da saúde mental e emocional
+          </SectionTitle>
+        </SectionHeader>
+        <Accordion text="lipsum" title="titleText" />
+      </AccordionContainer>
+      <AccordionContainer  id="myths">
+        <SectionHeader>
+          <SectionTitle>
+            Mitos vs. verdades
+          </SectionTitle>
+        </SectionHeader>
+        <Accordion text="lipsum" title="titleText" />
+      </AccordionContainer>
+      <AccordionContainer  id="professionals">
+        <SectionHeader>
+          <SectionTitle>
+            Profissionais especializados em menopausa
           </SectionTitle>
         </SectionHeader>
         <Accordion text="lipsum" title="titleText" />
