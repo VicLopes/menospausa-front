@@ -6,7 +6,7 @@ type LabelProps = {
 
 export const FormWrapper = styled.form`
   padding: 24px;
-  gap: 24px;
+  gap: 48px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 `;

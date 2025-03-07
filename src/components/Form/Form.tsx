@@ -43,8 +43,18 @@ const Form: React.FC = () => {
 
     if (Number(formData.heatWaves) + Number(formData.paresthesia) + Number(formData.insomnia) + Number(formData.nervousness)
        + Number(formData.depressiveness) + Number(formData.fatigue) + Number(formData.jointNmusclePain) + Number(formData.cephalalgia)
-       + Number(formData.palpitations) + Number(formData.tinnitus) === 1) {
+       + Number(formData.palpitations) + Number(formData.tinnitus) <= 19) {
       window.location.hash = "#questions";
+    }
+    else if (Number(formData.heatWaves) + Number(formData.paresthesia) + Number(formData.insomnia) + Number(formData.nervousness)
+      + Number(formData.depressiveness) + Number(formData.fatigue) + Number(formData.jointNmusclePain) + Number(formData.cephalalgia)
+      + Number(formData.palpitations) + Number(formData.tinnitus) <= 35) {
+     window.location.hash = "#fitoterapics";
+    }
+    else if (Number(formData.heatWaves) + Number(formData.paresthesia) + Number(formData.insomnia) + Number(formData.nervousness)
+      + Number(formData.depressiveness) + Number(formData.fatigue) + Number(formData.jointNmusclePain) + Number(formData.cephalalgia)
+      + Number(formData.palpitations) + Number(formData.tinnitus) > 35) {
+     window.location.hash = "#professionals";
     }
   };
 
@@ -100,7 +110,7 @@ const Form: React.FC = () => {
               type="radio"
               name="paresthesia"
               id="paresthesiaLight"
-              value={4}
+              value={2}
               checked={Number(formData.paresthesia) === 2}
               onChange={handleInputChange}
             />
@@ -111,7 +121,7 @@ const Form: React.FC = () => {
               type="radio"
               name="paresthesia"
               id="paresthesiaMedium"
-              value={8}
+              value={4}
               checked={Number(formData.paresthesia) === 4}
               onChange={handleInputChange}
             />
@@ -122,7 +132,7 @@ const Form: React.FC = () => {
               type="radio"
               name="paresthesia"
               id="paresthesiaHeavy"
-              value={12}
+              value={6}
               checked={Number(formData.paresthesia) === 6}
               onChange={handleInputChange}
             />
@@ -138,7 +148,7 @@ const Form: React.FC = () => {
               type="radio"
               name="insomnia"
               id="insomniaLight"
-              value={4}
+              value={2}
               checked={Number(formData.insomnia) === 2}
               onChange={handleInputChange}
             />
@@ -149,7 +159,7 @@ const Form: React.FC = () => {
               type="radio"
               name="insomnia"
               id="insomniaMedium"
-              value={8}
+              value={4}
               checked={Number(formData.insomnia) === 4}
               onChange={handleInputChange}
             />
@@ -160,7 +170,7 @@ const Form: React.FC = () => {
               type="radio"
               name="insomnia"
               id="insomniaHeavy"
-              value={12}
+              value={6}
               checked={Number(formData.insomnia) === 6}
               onChange={handleInputChange}
             />
@@ -173,10 +183,10 @@ const Form: React.FC = () => {
         <RadioContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="nervousness"
+              type="radio"
               name="nervousness"
               id="nervousnessLight"
-              value={4}
+              value={2}
               checked={Number(formData.nervousness) === 2}
               onChange={handleInputChange}
             />
@@ -184,10 +194,10 @@ const Form: React.FC = () => {
           </RadioInputContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="nervousness"
+              type="radio"
               name="nervousness"
               id="nervousnessMedium"
-              value={8}
+              value={4}
               checked={Number(formData.nervousness) === 4}
               onChange={handleInputChange}
             />
@@ -195,10 +205,10 @@ const Form: React.FC = () => {
           </RadioInputContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="nervousness"
+              type="radio"
               name="nervousness"
               id="nervousnessHeavy"
-              value={12}
+              value={6}
               checked={Number(formData.nervousness) === 6}
               onChange={handleInputChange}
             />
@@ -211,10 +221,10 @@ const Form: React.FC = () => {
         <RadioContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="depressiveness"
+              type="radio"
               name="depressiveness"
               id="depressivenessLight"
-              value={4}
+              value={1}
               checked={Number(formData.depressiveness) === 1}
               onChange={handleInputChange}
             />
@@ -222,10 +232,10 @@ const Form: React.FC = () => {
           </RadioInputContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="depressiveness"
+              type="radio"
               name="depressiveness"
               id="depressivenessMedium"
-              value={8}
+              value={2}
               checked={Number(formData.depressiveness) === 2}
               onChange={handleInputChange}
             />
@@ -233,10 +243,10 @@ const Form: React.FC = () => {
           </RadioInputContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="depressiveness"
+              type="radio"
               name="depressiveness"
               id="depressivenessHeavy"
-              value={12}
+              value={3}
               checked={Number(formData.depressiveness) === 3}
               onChange={handleInputChange}
             />
@@ -249,10 +259,10 @@ const Form: React.FC = () => {
         <RadioContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="fatigue"
+              type="radio"
               name="fatigue"
               id="fatigueLight"
-              value={4}
+              value={1}
               checked={Number(formData.fatigue) === 1}
               onChange={handleInputChange}
             />
@@ -260,10 +270,10 @@ const Form: React.FC = () => {
           </RadioInputContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="fatigue"
+              type="radio"
               name="fatigue"
               id="fatigueMedium"
-              value={8}
+              value={2}
               checked={Number(formData.fatigue) === 2}
               onChange={handleInputChange}
             />
@@ -271,10 +281,10 @@ const Form: React.FC = () => {
           </RadioInputContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="fatigue"
+              type="radio"
               name="fatigue"
               id="fatigueHeavy"
-              value={12}
+              value={3}
               checked={Number(formData.fatigue) === 3}
               onChange={handleInputChange}
             />
@@ -287,10 +297,10 @@ const Form: React.FC = () => {
         <RadioContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="jointNmusclePain"
+              type="radio"
               name="jointNmusclePain"
               id="jointNmusclePainLight"
-              value={4}
+              value={1}
               checked={Number(formData.jointNmusclePain) === 1}
               onChange={handleInputChange}
             />
@@ -298,10 +308,10 @@ const Form: React.FC = () => {
           </RadioInputContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="jointNmusclePain"
+              type="radio"
               name="jointNmusclePain"
               id="jointNmusclePainMedium"
-              value={8}
+              value={2}
               checked={Number(formData.jointNmusclePain) === 2}
               onChange={handleInputChange}
             />
@@ -309,10 +319,10 @@ const Form: React.FC = () => {
           </RadioInputContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="jointNmusclePain"
+              type="radio"
               name="jointNmusclePain"
               id="jointNmusclePainHeavy"
-              value={12}
+              value={3}
               checked={Number(formData.jointNmusclePain) === 3}
               onChange={handleInputChange}
             />
@@ -325,10 +335,10 @@ const Form: React.FC = () => {
         <RadioContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="cephalalgia"
+              type="radio"
               name="cephalalgia"
               id="cephalalgiaLight"
-              value={4}
+              value={1}
               checked={Number(formData.cephalalgia) === 1}
               onChange={handleInputChange}
             />
@@ -336,10 +346,10 @@ const Form: React.FC = () => {
           </RadioInputContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="cephalalgia"
+              type="radio"
               name="cephalalgia"
               id="cephalalgiaMedium"
-              value={8}
+              value={2}
               checked={Number(formData.cephalalgia) === 2}
               onChange={handleInputChange}
             />
@@ -347,10 +357,10 @@ const Form: React.FC = () => {
           </RadioInputContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="cephalalgia"
+              type="radio"
               name="cephalalgia"
               id="cephalalgiaHeavy"
-              value={12}
+              value={3}
               checked={Number(formData.cephalalgia) === 3}
               onChange={handleInputChange}
             />
@@ -363,10 +373,10 @@ const Form: React.FC = () => {
         <RadioContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="palpitations"
+              type="radio"
               name="palpitations"
               id="palpitationsLight"
-              value={4}
+              value={1}
               checked={Number(formData.palpitations) === 1}
               onChange={handleInputChange}
             />
@@ -374,10 +384,10 @@ const Form: React.FC = () => {
           </RadioInputContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="palpitations"
+              type="radio"
               name="palpitations"
               id="palpitationsMedium"
-              value={8}
+              value={2}
               checked={Number(formData.palpitations) === 2}
               onChange={handleInputChange}
             />
@@ -385,10 +395,10 @@ const Form: React.FC = () => {
           </RadioInputContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="palpitations"
+              type="radio"
               name="palpitations"
               id="palpitationsHeavy"
-              value={12}
+              value={3}
               checked={Number(formData.palpitations) === 3}
               onChange={handleInputChange}
             />
@@ -401,10 +411,10 @@ const Form: React.FC = () => {
         <RadioContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="tinnitus"
+              type="radio"
               name="tinnitus"
               id="tinnitusLight"
-              value={4}
+              value={1}
               checked={Number(formData.tinnitus) === 1}
               onChange={handleInputChange}
             />
@@ -412,10 +422,10 @@ const Form: React.FC = () => {
           </RadioInputContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="tinnitus"
+              type="radio"
               name="tinnitus"
               id="tinnitusMedium"
-              value={8}
+              value={2}
               checked={Number(formData.tinnitus) === 2}
               onChange={handleInputChange}
             />
@@ -423,10 +433,10 @@ const Form: React.FC = () => {
           </RadioInputContainer>
           <RadioInputContainer>
             <FormFieldInput
-              type="tinnitus"
+              type="radio"
               name="tinnitus"
               id="tinnitusHeavy"
-              value={12}
+              value={3}
               checked={Number(formData.tinnitus) === 3}
               onChange={handleInputChange}
             />

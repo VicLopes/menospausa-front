@@ -69,6 +69,7 @@ export const SectionTitle = styled.h2`
 export const SectionDescription = styled(Container)`
   font-size: 24px;
   font-weight: 300;
+  text-align: center;
 `;
 
 export const ResourcesContainer = styled(Container)`
