@@ -151,8 +151,8 @@ function App() {
             Tratamentos: Opções de tratamento médico e complementar
           </SectionTitle>
           <SectionDescription>
-          Terapia hormonal também conhecida como terapêutica hormonal de substituição (THS) e tratamento hormonal da menopausa (THM). 
-          É o tratamento que adiciona, bloqueia ou remove hormônios. 
+          <p>Terapia hormonal também conhecida como terapêutica hormonal de substituição (THS) e tratamento hormonal da menopausa (THM).</p> 
+          É o tratamento que adiciona, bloqueia ou remove hormônios.
           Na menopausa, hormônios são administradas para ajustar níveis hormonais baixos e aliviar os fogachos e outros sintomas da menopausa.
           </SectionDescription>
         </SectionHeader>
@@ -175,7 +175,7 @@ function App() {
             Profissionais especializados em menopausa
           </SectionTitle>
           <SectionDescription>
-          A menopausa é uma fase natural da vida da mulher, marcada por diversas mudanças hormonais e físicas. 
+          <p>A menopausa é uma fase natural da vida da mulher, marcada por diversas mudanças hormonais e físicas. </p>
           Para garantir uma transição suave e saudável, contar com o apoio de profissionais especializados é fundamental.
           </SectionDescription>
           <SectionDescription>
@@ -215,6 +215,8 @@ function App() {
          <SectionDescription>
          Quando procurar ajuda? Se você está sentindo desconforto ou suas atividades diárias estão sendo prejudicadas pelos sintomas da menopausa, 
          procure um profissional de saúde. Quanto mais cedo iniciar o tratamento, maiores as chances de controlar os sintomas e ter uma melhor qualidade de vida. 
+         </SectionDescription>
+         <SectionDescription>
          Lembre-se: A menopausa é uma fase normal da vida, e com o acompanhamento adequado, você pode passar por ela de forma tranquila e saudável.
          </SectionDescription>
         <hr />
@@ -358,9 +360,12 @@ function App() {
             Atividades físicas mais recomendadas para mulheres na menopausa
           </SectionTitle>
           <SectionDescription>
-          A atividade física é um pilar fundamental para a saúde durante a menopausa, auxiliando no alívio dos sintomas, na prevenção de doenças e na melhoria da qualidade de vida. 
-          Mas quais atividades são mais indicadas? Vamos explorar! 
-          A ciência aponta que os seguintes tipos de exercícios são especialmente benéficos para as mulheres nessa fase:
+          <p>A atividade física é um pilar fundamental para a saúde durante a menopausa,</p>
+          <p>auxiliando no alívio dos sintomas, na prevenção de doenças e na melhoria da qualidade de vida.</p>
+          </SectionDescription>
+          <SectionDescription>
+          <p>Mas quais atividades são mais indicadas? Vamos explorar!</p>
+          <p>A ciência aponta que os seguintes tipos de exercícios são especialmente benéficos para as mulheres nessa fase:</p>
           </SectionDescription>
         </SectionHeader>
         <Accordion text="
@@ -402,8 +407,9 @@ function App() {
             Cuidados com a saúde sexual
           </SectionTitle>
           <SectionDescription>
-          A menopausa traz diversas mudanças no corpo da mulher, e a vida sexual é uma das áreas que pode ser afetada. 
-          É importante entender que a sexualidade não tem fim com a menopausa, mas alguns cuidados especiais podem tornar a experiência mais prazerosa.
+          <p>A menopausa traz diversas mudanças no corpo da mulher, e a vida sexual é uma das áreas que pode ser afetada.</p>
+          <p>É importante entender que a sexualidade não tem fim com a menopausa,</p>
+          <p>mas alguns cuidados especiais podem tornar a experiência mais prazerosa.</p>
           </SectionDescription>
         </SectionHeader>
         <Accordion text="
@@ -477,8 +483,9 @@ function App() {
           Mitos sobre a Menopausa e a Verdade por trás deles
           </SectionDescription>
           <SectionDescription>
-          A menopausa, um processo natural na vida da mulher, é cercada por diversos mitos que podem gerar ansiedade e desinformação. 
-          Vamos desmistificar alguns dos mais comuns e apresentar a visão da literatura científica:
+          <p>A menopausa, um processo natural na vida da mulher,</p>
+          <p>é cercada por diversos mitos que podem gerar ansiedade e desinformação.</p>
+          <p>Vamos desmistificar alguns dos mais comuns e apresentar a visão da literatura científica:</p>
           </SectionDescription>
         </SectionHeader>
         <Accordion text="Verdade: A menopausa é uma fase da vida, não uma doença.
