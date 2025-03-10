@@ -4,6 +4,10 @@ type LinkProps = {
   formButton?: boolean;
 };
 
+type HamburgerProps = {
+  isOpen: boolean;
+};
+
 export const NavbarWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -22,11 +26,12 @@ export const NavbarWrapper = styled.nav`
   }
 `;
 
-export const NavbarLinks = styled.div`
+export const NavbarLinks = styled.div<HamburgerProps>`
   display: flex;
   gap: 8px;
 
   @media (max-width: 768px) {
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
     flex-direction: column;
     gap: 16px;
     margin-top: 16px;
@@ -46,6 +51,21 @@ export const NavbarLink = styled.a<LinkProps>`
   text-decoration: none;
 `;
 
-export const NavbarLogo = styled.div``;
+export const NavbarLogo = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-export const LogoImage = styled.img``;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+export const HamburgerWrapper = styled.div<HamburgerProps>`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;

@@ -22,6 +22,9 @@ import {
 } from "./App.styles";
 import MenoLogo from "../assets/logo.svg?react";
 import QuestionLogo from "../assets/question.svg?react";
+import Img1 from "../assets/img/img1.png";
+import Img2 from "../assets/img/img2.png";
+import Img3 from "../assets/img/img3.png";
 
 function App() {
   return (
@@ -49,9 +52,9 @@ function App() {
           </SectionDescription>
         </SectionHeader>
         <AboutUsImages>
-          <img src="../assets/img/img1.png" />
-          <img src="../assets/img/img2.png" />
-          <img src="../assets/img/img3.png" />
+          <img src={Img1} />
+          <img src={Img2} />
+          <img src={Img3} />
         </AboutUsImages>
         <Button
           label="Veja mais"
