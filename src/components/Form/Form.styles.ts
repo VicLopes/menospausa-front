@@ -9,6 +9,11 @@ export const FormWrapper = styled.form`
   gap: 24px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const FormField = styled.div`
