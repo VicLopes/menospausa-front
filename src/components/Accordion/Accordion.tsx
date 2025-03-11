@@ -9,10 +9,10 @@ import Chevron from "../../assets/chevron.svg?react";
 
 type AccordionProps = {
   title: string;
-  text: string;
+  children: React.ReactNode;
 };
 
-const Accordion: React.FC<AccordionProps> = ({ title, text }) => {
+const Accordion: React.FC<AccordionProps> = ({ title, children }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -23,7 +23,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, text }) => {
           style={{ rotate: isExpanded ? "180deg" : "0deg", transition: "0.2s" }}
         />
       </AccordionHeader>
-      <AccordionText expanded={isExpanded}>{text}</AccordionText>
+      <AccordionText expanded={isExpanded}>{children}</AccordionText>
     </AccordionContainer>
   );
 };
