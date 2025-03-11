@@ -64,6 +64,7 @@ export const SectionTitle = styled.h2`
   font-size: 32px;
   color: var(--background-primary);
   text-transform: uppercase;
+  text-align: center;
 `;
 
 export const SectionDescription = styled(Container)`
