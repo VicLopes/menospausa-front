@@ -8,9 +8,11 @@ import {
 } from "./Navbar.styles";
 import MenoLogo from "../../assets/logo.svg?react";
 import HamburgerLogo from "../../assets/burger-menu.svg?react";
+import { useScroll } from "../../hooks";
 
 const Navbar: React.FC = () => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+  const { activeSection } = useScroll();
 
   return (
     <NavbarWrapper>
@@ -28,12 +30,18 @@ const Navbar: React.FC = () => {
         </HamburgerWrapper>
       </NavbarLogo>
       <NavbarLinks isOpen={isHamburgerOpen}>
-        <NavbarLink href="#about-us">Sobre Nós</NavbarLink>
-        <NavbarLink href="#form" formButton>
+        <NavbarLink href="#about-us" isActive={activeSection === "about-us"}>
+          Sobre Nós
+        </NavbarLink>
+        <NavbarLink href="#form" isActive={activeSection === "form"}>
           Avaliação
         </NavbarLink>
-        <NavbarLink href="#resources">Recursos</NavbarLink>
-        <NavbarLink href="#questions">Dúvidas</NavbarLink>
+        <NavbarLink href="#resources" isActive={activeSection === "resources"}>
+          Recursos
+        </NavbarLink>
+        <NavbarLink href="#questions" isActive={activeSection === "questions"}>
+          Dúvidas
+        </NavbarLink>
       </NavbarLinks>
     </NavbarWrapper>
   );
