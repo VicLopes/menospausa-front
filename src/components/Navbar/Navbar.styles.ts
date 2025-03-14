@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 type LinkProps = {
-  formButton?: boolean;
+  isActive?: boolean;
 };
 
 type HamburgerProps = {
@@ -39,11 +39,11 @@ export const NavbarLinks = styled.div<HamburgerProps>`
 `;
 
 export const NavbarLink = styled.a<LinkProps>`
-  color: ${({ formButton }) => (formButton ? "white" : "inherit")};
+  color: ${({ isActive }) => (isActive ? "white" : "inherit")};
   font-size: 16px;
   padding: 8px 16px;
-  background-color: ${({ formButton }) =>
-    formButton ? "var(--background-primary)" : "inherit"};
+  background-color: ${({ isActive }) =>
+    isActive ? "var(--background-primary)" : "inherit"};
   border-radius: 32px;
   align-items: center;
   display: flex;
